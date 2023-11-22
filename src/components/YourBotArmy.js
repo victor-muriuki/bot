@@ -1,5 +1,5 @@
 import React from "react";
-
+import BotProfile from "./BotProfile";
 
 function YourBotArmy  ({ army, onReleaseFromArmy, onDischarge })  {
     return (

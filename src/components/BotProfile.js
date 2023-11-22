@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function BotProfile  ({ bot }) {
     return (
       <div>
@@ -10,5 +11,6 @@ function BotProfile  ({ bot }) {
       </div>
     );
   };
+
 
   export default BotProfile;
