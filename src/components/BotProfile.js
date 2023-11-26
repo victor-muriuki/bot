@@ -3,7 +3,7 @@ import React from "react";
 
 function BotProfile  ({ bot }) {
     return (
-      <div>
+      <div className=" card-image">
         <img src={bot.avatar_url} alt={bot.name} />
         <p>Name: {bot.name}</p>
         <p>Health: {bot.health}</p>

@@ -40,33 +40,27 @@ function BotCollection () {
   };
 
     return (
-    //   <div>
-    //     <h2>Bot Collection</h2>
-    //     {bots.map((bot) => (
-    //       <div key={bot.id}>
-    //         <BotProfile bot={bot} />
-    //         <button onClick={() => onAddToArmy(bot)}>Add to Army</button>
-    //       </div>
-    //     ))}
-    //   </div>
+ 
     <div>
-    <h1>War Bots</h1>
+         <h1>War Bots</h1>
 
-      <div>
-        <h2>Bot Collection</h2>
-        {bots.map((bot) => (
-          <div key={bot.id}>
-            <BotProfile bot={bot} />
-            
+          <div className="card-container">
+              <h2>Bot Collection</h2>
+              {bots.map((bot) => (
+              <div key={bot.id} className="bot-card">
+              <BotProfile bot={bot} />
+              <button onClick={() => addToArmy(bot)}>Add to Army</button>
+              </div>
+         
+              ))}
           </div>
-        ))}
-      </div>
 
-      <div>
-        <h2>Your Bot Army</h2>
-        <YourBotArmy army={army} onReleaseFromArmy={releaseFromArmy} onDischarge={dischargeBot} />
-      </div>
-      </div>
+
+         <div>
+             <h2>Your Bot Army</h2>
+             <YourBotArmy army={army} onReleaseFromArmy={releaseFromArmy} onDischarge={dischargeBot} />
+         </div>
+  </div>
     );
   };
 
