@@ -23,10 +23,12 @@ Install dependencies:
 
 ## alternitavely
 
-you can follow this link to view the app. 
+You can follow the link on the gitHub about section to view the app. 
 
 ## Usage
-To start the development server, use the following command: npm start
+To start the development server, use the following commands:
+       json-server --watch db.json
+       npm start
 This will launch the app in your default web browser.
 
 ## Folder Structure

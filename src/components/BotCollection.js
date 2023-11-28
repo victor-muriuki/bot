@@ -8,7 +8,7 @@ function BotCollection () {
 
   useEffect(() => {
    
-    fetch('http://127.0.0.1:3000/bots')
+    fetch('bots-s8ny.onrender.com/bots')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
