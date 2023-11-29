@@ -7,7 +7,10 @@ function BotProfile  ({ bot }) {
         <img src={bot.avatar_url} alt={bot.name} />
         <p>Name: {bot.name}</p>
         <p>Health: {bot.health}</p>
-        {/* Include other bot details */}
+        <p>Damage: {bot.damage}</p>
+        <p>Armor: {bot.armor}</p>
+        
+        
       </div>
     );
   };
