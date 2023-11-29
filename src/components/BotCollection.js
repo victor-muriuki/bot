@@ -29,14 +29,16 @@ function BotCollection () {
       setArmy((prevArmy) => [...prevArmy, selectedBot]);
     }
   };
-
+// releasesbot from recruited army
   const releaseFromArmy = (releasedBot) => {
     setArmy((prevArmy) => prevArmy.filter((bot) => bot !== releasedBot));
   };
-
+// discharges bot from the war bots collection 
   const dischargeBot = (botId) => {
     
-    setArmy((prevArmy) => prevArmy.filter((bot) => bot.id !== botId));
+    setBots((prevArmy) => prevArmy.filter((bot) => bot.id !== botId));
+    //releases bot from yourBotArmy once its discharged
+    // releaseFromArmy(botId);
   };
 
     return (
@@ -50,6 +52,8 @@ function BotCollection () {
               <div key={bot.id} className="bot-card">
               <BotProfile bot={bot} />
               <button onClick={() => addToArmy(bot)}>Add to Army</button>
+              {/* //added the dischrge button to the war bots collection */}
+              <button onClick={() => dischargeBot(bot.id)}>Discharge</button>
               </div>
          
               ))}
@@ -58,10 +62,11 @@ function BotCollection () {
 
          <div>
              <h2>Your Bot Army</h2>
-             <YourBotArmy army={army} onReleaseFromArmy={releaseFromArmy} onDischarge={dischargeBot} />
+             <YourBotArmy army={army} onReleaseFromArmy={releaseFromArmy}  />
          </div>
   </div>
     );
   };
 
   export default BotCollection;
+

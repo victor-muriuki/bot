@@ -9,7 +9,7 @@ function YourBotArmy  ({ army, onReleaseFromArmy, onDischarge })  {
           <div key={bot.id} className="bot-card">
             <BotProfile bot={bot} />
             <button onClick={() => onReleaseFromArmy(bot)}>Release from Army</button>
-            <button onClick={() => onDischarge(bot.id)}>Discharge</button>
+            {/* <button onClick={() => onDischarge(bot.id)}>Discharge</button> */}
           </div>
         ))}
       </div>
